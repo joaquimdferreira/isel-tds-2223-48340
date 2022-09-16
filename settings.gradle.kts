@@ -9,4 +9,5 @@
 
 rootProject.name = "homework-tds-48340"
 include("homework1")
-include("aula2-stack")
+include("homework2")
+include("lesson2-stack")
