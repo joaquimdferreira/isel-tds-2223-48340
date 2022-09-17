@@ -1,8 +1,8 @@
-package refactor.tds
+package homework.tds
 
 interface Stack<T> {
-    fun push(value : T)
-    fun pop(): T
-    fun isEmpty(): Boolean
+    fun push(item: T) : Stack<T>
     fun peek(): T
+    fun isEmpty(): Boolean
+    fun pop(): Stack<T>
 }
