@@ -21,26 +21,25 @@ class NaifDateTests {
     fun `comparing two identical dates returns true`() {
         val date = NaifDate(1,1,1970)
         val expected = NaifDate(1,1,1970)
-        assertTrue { date.compareDates(expected) }
+        assertEquals(expected, date)
     }
 
     @Test
     fun `addDays returns correctly when in the same month`() {
         val date = NaifDate(1,2,1970)
         val expected = NaifDate(11,2,1970)
-        assertTrue { date.addDays(10).compareDates(expected) }
+        assertEquals(expected, date.addDays(10))
     }
 
     @Test
     fun `addDays returns correctly when month and year changes`() {
         val date = NaifDate(28, 9, 2022)
         val expected = NaifDate(23,1,2023)
-        assertTrue { date.addDays(117).compareDates(expected) }
+        assertEquals(expected, date.addDays(117))
     }
 
     @Test
-    fun `toString correctly translates into desired format`(){
-        val date = NaifDate(1,1,1970)
-        assertTrue { date.toString().compareTo("1-1-1970") == 0 }
+    fun`sucessfully creates a string  from a date in the desired manner`(){
+        assertTrue{ "11-5-2000" == NaifDate(11,5,2000).toString() }
     }
 }

@@ -41,13 +41,13 @@ class NaifDate(
             4, 6, 9, 11 -> 30
             else -> if (y % 4 == 0) 29 else 28
         }
-
     }
-
-    fun compareDates( date2: NaifDate ) = this.day == date2.day &&
-            this.month == date2.month &&
-            this.year == date2.year
-
+    override fun equals(other: Any?): Boolean {
+        if(other !is NaifDate)return false
+        return this.day == other.day &&
+                this.month == other.month &&
+                this.year == other.year
+    }
 
     override fun toString(): String {
         return "$day-$month-$year"
