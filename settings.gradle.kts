@@ -11,4 +11,5 @@ rootProject.name = "homework-tds-48340"
 include("homework1")
 include("homework2")
 include("homework3")
+include("homework4")
 include("lesson2-stack")
